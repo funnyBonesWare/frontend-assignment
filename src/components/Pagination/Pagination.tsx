@@ -21,30 +21,25 @@ const Pagination: React.FC<PaginationProps> = ({
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className={`${styles.button} ${styles.previousNext}`}
+        className={`${styles.button} ${styles.previousNext} ${
+          currentPage === 1 ? styles.disabled : ""
+        }`}
         aria-label="Previous page"
         aria-disabled={currentPage === 1 ? "true" : "false"}
       >
         Previous
       </button>
 
-      {Array.from({ length: totalPages }, (_, index) => (
-        <button
-          key={index}
-          className={`${styles.button} ${
-            currentPage === index + 1 ? styles.active : styles.inactive
-          }`}
-          onClick={() => onPageChange(index + 1)}
-          aria-current={currentPage === index + 1 ? "page" : undefined}
-        >
-          {index + 1}
-        </button>
-      ))}
+      <span className={styles.pageInfo}>
+        Page {currentPage} of {totalPages}
+      </span>
 
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className={`${styles.button} ${styles.previousNext}`}
+        className={`${styles.button} ${styles.previousNext} ${
+          currentPage === totalPages ? styles.disabled : ""
+        }`}
         aria-label="Next page"
         aria-disabled={currentPage === totalPages ? "true" : "false"}
       >

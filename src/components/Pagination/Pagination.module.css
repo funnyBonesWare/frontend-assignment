@@ -1,34 +1,25 @@
 .pagination {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 0.8rem;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .button {
-  border: 1px solid #28a745;
-  border-radius: 8px;
   padding: 0.6rem 1.2rem;
+  border-radius: 0.25rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.active {
-  background-color: #28a745;
-  color: white;
-  transform: scale(1.1);
-}
-
-.inactive {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  border: 1px solid #28a745;
+  color: #28a745;
   background-color: white;
-  color: #28a745;
 }
 
-.inactive:hover {
+.button:hover {
   background-color: #f1f8f4;
-  color: #28a745;
-  transform: scale(1.05);
 }
 
 .previousNext {
@@ -40,8 +31,22 @@
   background-color: #218838;
 }
 
+/* Disabled button styling */
 .button:disabled {
   background-color: #d4d4d4;
   color: #aaa;
   cursor: not-allowed;
+}
+
+/* Apply the active style for the "Previous" and "Next" buttons */
+.previousNext:disabled {
+  background-color: #d4d4d4;
+  border: 1px solid #ccc;
+  color: #aaa;
+}
+
+/* Style the page info */
+.pageInfo {
+  font-size: 1rem;
+  font-weight: 500;
 }
