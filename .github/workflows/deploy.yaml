@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  # Trigger the action only for the main branch
+      - mainA  # Trigger the action only for the main branch
 
 jobs:
   build:
