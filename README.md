@@ -17,6 +17,7 @@ This project is part of the **SaaS Labs Frontend Assignment**, where the goal wa
 - **Responsive Design**: The app is mobile-friendly and works seamlessly across devices.
 - **Error Handling**: The app gracefully handles loading and error states when fetching data.
 - **Styling**: The app uses clean and modern styles, with some hover effects and button transitions.
+- **CI/CD**: The app/repo is integrated with Github actions , which mackes sure, everytime i push to mainA branch, it gets automatically deployed to my vercel
 
 ## 🛠 Technologies Used
 
